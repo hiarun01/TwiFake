@@ -1,12 +1,28 @@
-import {Button} from "@/components/ui/button";
+import {createBrowserRouter} from "react-router-dom";
+import Layout from "./layout/Layout";
+import {RouterProvider} from "react-router";
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+    ],
+  },
+]);
 
 const App = () => {
-  return (
-    <div className="flex min-h-svh flex-col items-center justify-center">
-      TwiFake : a fake x tweet generator
-      <Button>Click me</Button>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
