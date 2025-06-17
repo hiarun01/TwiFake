@@ -52,7 +52,7 @@ const HeroSection = () => {
           className="bg-white p-6 rounded-xl shadow-md border w-full max-w-xs sm:max-w-sm"
         >
           <Link to="https://x.com/hiarun01">
-            <div className="flex items-center gap-3 mb-3">
+            <div className="flex items-center gap-2 mb-3">
               <div className="w-10 h-10 flex items-center justify-center font-bold">
                 <img src="/favicon.png" alt="" className="rounded-full" />
               </div>
