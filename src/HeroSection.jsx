@@ -1,7 +1,7 @@
 import React from "react";
 import {Button} from "./components/ui/button";
 import {motion} from "framer-motion";
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -13,9 +13,9 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-base sm:text-lg text-gray-600 mb-8">
-          Create realistic-looking X posts for mockups, presentations, or
-          creative work. You can customize everything from the username to
-          likes, replies, and more.
+          TwiFake is a simple tool that lets you create realistic-looking fake
+          tweets (now called X posts) for design mockups, social media content,
+          or fun creative projects.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-6">
@@ -43,6 +43,7 @@ const HeroSection = () => {
       </div>
 
       {/* Right content - Tweet mockup */}
+
       <div className="w-full lg:w-1/2 flex justify-center">
         <motion.div
           initial={{opacity: 0, y: 40, scale: 0.95}}
@@ -50,27 +51,29 @@ const HeroSection = () => {
           transition={{duration: 0.6, ease: "easeOut"}}
           className="bg-white p-6 rounded-xl shadow-md border w-full max-w-xs sm:max-w-sm"
         >
-          <div className="flex items-center gap-3 mb-3">
-            <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold">
-              JD
+          <Link to="https://x.com/hiarun01">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-10 h-10 flex items-center justify-center font-bold">
+                <img src="/favicon.png" alt="" className="rounded-full" />
+              </div>
+              <div>
+                <div className="font-bold text-gray-900">Arun kumar</div>
+                <div className="text-sm text-gray-500">@hiarun01</div>
+              </div>
             </div>
-            <div>
-              <div className="font-bold text-gray-900">John Doe</div>
-              <div className="text-sm text-gray-500">@johndoe · 2h</div>
+
+            <p className="mb-4 text-gray-800">
+              Just discovered this amazing fake tweet generator! Perfect for my
+              design mockups 🚀
+            </p>
+
+            <div className="flex justify-between text-gray-500 text-sm">
+              <span>💬 24</span>
+              <span>🔁 12</span>
+              <span>❤️ 156</span>
+              <span>🔗</span>
             </div>
-          </div>
-
-          <p className="mb-4 text-gray-800">
-            Just discovered this amazing fake tweet generator! Perfect for my
-            design mockups 🚀
-          </p>
-
-          <div className="flex justify-between text-gray-500 text-sm">
-            <span>💬 24</span>
-            <span>🔁 12</span>
-            <span>❤️ 156</span>
-            <span>🔗</span>
-          </div>
+          </Link>
         </motion.div>
       </div>
     </section>
