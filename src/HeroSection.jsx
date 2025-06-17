@@ -5,17 +5,17 @@ import {Link, NavLink} from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-16 lg:py-24 flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
+    <section className="max-w-7xl mx-auto px-4 py-8 lg:py-32 flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
       {/* Left content */}
       <div className="w-full lg:w-1/2">
-        <h1 className="text-4xl sm:text-5xl font-extrabold mb-6 leading-tight text-gray-900">
+        <h1 className="text-3xl sm:text-5xl font-extrabold mb-6 leading-tight text-gray-900">
           Create Fake Tweets <br className="hidden sm:block" /> in Seconds
         </h1>
 
         <p className="text-base sm:text-lg text-gray-600 mb-8">
           TwiFake is a simple tool that lets you create realistic-looking fake
-          tweets (now called X posts) for design mockups, social media content,
-          or fun creative projects.
+          tweets for design mockups, social media content, or fun creative
+          projects.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-6">
