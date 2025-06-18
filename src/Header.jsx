@@ -13,7 +13,7 @@ const Header = () => {
       <NavLink to="/dashboard">
         <Button
           variant="outline"
-          className=" text-black px-6 py-5 rounded-lg font-semibold transition"
+          className=" text-black px-4 py-5 rounded-lg font-semibold transition"
         >
           ⚡ Start Creating
         </Button>

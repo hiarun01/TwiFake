@@ -43,13 +43,12 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-gray-100 py-10">
+    <div className="min-h-screen bg-white py-10">
       <div className="mx-auto px-4 flex flex-col ">
         {/* tweet preview */}
-        <div className="max-w-7xl mx-auto w-full lg:py-12 py-8 rounded-2xl shadow-2xs bg-white ">
+        <div className="max-w-7xl mx-auto w-full lg:py-5 py-8 bg-white">
           <TweetPreview
             tweetData={tweetData}
-            setTweetData={setTweetData}
             tweetRef={tweetRef}
             handleDownload={handleDownload}
           />

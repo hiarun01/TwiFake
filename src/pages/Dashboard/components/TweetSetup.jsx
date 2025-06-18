@@ -3,7 +3,7 @@ import React from "react";
 
 const TweetSetup = ({tweetData, handleInputChange}) => {
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 flex flex-col gap-8">
+    <div className="bg-white rounded-2xl shadow-2xs p-8 border border-gray-100 flex flex-col gap-8">
       <h2 className="text-2xl font-bold text-black mb-2 lg:text-left text-center">
         Customize Tweet
       </h2>
