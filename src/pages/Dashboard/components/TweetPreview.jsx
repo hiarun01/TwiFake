@@ -11,12 +11,12 @@ import {
 } from "lucide-react";
 import React from "react";
 
-const TweetPreview = ({tweetData, setTweetData, tweetRef, handleDownload}) => {
+const TweetPreview = ({tweetData, tweetRef, handleDownload}) => {
   return (
     <div className="max-w-lg mx-auto flex flex-col items-center ">
       <div
         ref={tweetRef}
-        className="w-full bg-white border border-gray-100 p-5"
+        className="w-full bg-white border border-gray-100 px-3 py-3 "
       >
         {/* Profile and Header */}
         <div className="flex items-center gap-2 mb-3">
