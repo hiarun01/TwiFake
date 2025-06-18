@@ -1,5 +1,4 @@
-import {Button} from "@/components/ui/button";
-import {Verified} from "lucide-react";
+import {Input} from "@/components/ui/input";
 import React from "react";
 
 const TweetSetup = ({tweetData, handleInputChange}) => {
@@ -21,18 +20,18 @@ const TweetSetup = ({tweetData, handleInputChange}) => {
           }}
         />
         <div className="flex-1 flex flex-col gap-2">
-          <input
+          <Input
             type="text"
             value={tweetData.name}
             onChange={(e) => handleInputChange("name", e.target.value)}
             className="p-2 rounded-md border border-gray-200 text-gray-900 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 "
             placeholder="Display Name"
           />
-          <input
+          <Input
             type="text"
             value={tweetData.username}
             onChange={(e) => handleInputChange("username", e.target.value)}
-            className="p-2 rounded-md border border-gray-200 text-gray-900 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-sm"
+            className="p-2 rounded-md text-gray-900 text-sm"
             placeholder="Username"
           />
         </div>
@@ -69,8 +68,7 @@ const TweetSetup = ({tweetData, handleInputChange}) => {
           htmlFor="verified"
           className="text-sm font-medium text-gray-700 flex items-center gap-1"
         >
-          <Verified className="w-4 h-4 text-blue-500 fill-current" />
-          Verified
+          Verified Badge
         </label>
       </div>
       {/* Tweet Content */}
@@ -83,7 +81,7 @@ const TweetSetup = ({tweetData, handleInputChange}) => {
           onChange={(e) => handleInputChange("tweet", e.target.value)}
           rows={3}
           maxLength={280}
-          className="w-full p-3 rounded-md border border-gray-200 text-gray-900 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 resize-none transition-colors"
+          className="w-full p-3 rounded-md border border-gray-200 text-gray-900 resize-none"
           placeholder="What's happening?"
         />
         <div
@@ -100,24 +98,24 @@ const TweetSetup = ({tweetData, handleInputChange}) => {
           <label className="block text-xs font-medium mb-1 text-gray-500">
             Time
           </label>
-          <input
+          <Input
             type="text"
             value={tweetData.time}
             onChange={(e) => handleInputChange("time", e.target.value)}
-            className="w-full p-2 rounded-md border border-gray-200 text-gray-900 focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
-            placeholder="2:04 PM"
+            className="w-full p-2 rounded-md text-gray-900"
+            placeholder={tweetData.time}
           />
         </div>
         <div>
           <label className="block text-xs font-medium mb-1 text-gray-500">
             Date
           </label>
-          <input
+          <Input
             type="text"
             value={tweetData.date}
             onChange={(e) => handleInputChange("date", e.target.value)}
-            className="w-full p-2 rounded-md border border-gray-200 text-gray-900 focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
-            placeholder="Dec 15, 2024"
+            className="w-full p-2 rounded-md text-gray-900"
+            placeholder={tweetData.date}
           />
         </div>
       </div>
@@ -127,60 +125,60 @@ const TweetSetup = ({tweetData, handleInputChange}) => {
           <label className="block text-xs font-medium mb-1 text-gray-500">
             Comments
           </label>
-          <input
+          <Input
             type="text"
             value={tweetData.comments}
             onChange={(e) => handleInputChange("comments", e.target.value)}
-            className="w-full p-2 rounded-md border border-gray-200 text-gray-900 focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
-            placeholder="567"
+            className="w-full p-2 rounded-md text-gray-900"
+            placeholder={tweetData.comments}
           />
         </div>
         <div>
           <label className="block text-xs font-medium mb-1 text-gray-500">
             Retweets
           </label>
-          <input
+          <Input
             type="text"
             value={tweetData.retweets}
             onChange={(e) => handleInputChange("retweets", e.target.value)}
-            className="w-full p-2 rounded-md border border-gray-200 text-gray-900 focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
-            placeholder="764"
+            className="w-full p-2 rounded-md text-gray-900"
+            placeholder={tweetData.retweets}
           />
         </div>
         <div>
           <label className="block text-xs font-medium mb-1 text-gray-500">
             Likes
           </label>
-          <input
+          <Input
             type="text"
             value={tweetData.likes}
             onChange={(e) => handleInputChange("likes", e.target.value)}
-            className="w-full p-2 rounded-md border border-gray-200 text-gray-900 focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
-            placeholder="12,345"
+            className="w-full p-2 rounded-md text-gray-900"
+            placeholder={tweetData.likes}
           />
         </div>
         <div>
           <label className="block text-xs font-medium mb-1 text-gray-500">
             Views
           </label>
-          <input
+          <Input
             type="text"
             value={tweetData.views}
             onChange={(e) => handleInputChange("views", e.target.value)}
-            className="w-full p-2 rounded-md border border-gray-200 text-gray-900 focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
-            placeholder="2.1M"
+            className="w-full p-2 rounded-md text-gray-900"
+            placeholder={tweetData.views}
           />
         </div>
         <div className="w-full">
           <label className="block text-xs font-medium mb-1 text-gray-500">
             Bookmarks
           </label>
-          <input
+          <Input
             type="text"
             value={tweetData.bookmarks}
             onChange={(e) => handleInputChange("bookmarks", e.target.value)}
-            className="w-full p-2 rounded-md border border-gray-200 text-gray-900 focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
-            placeholder="890"
+            className="w-full p-2 rounded-md text-gray-900"
+            placeholder={tweetData.bookmarks}
           />
         </div>
       </div>

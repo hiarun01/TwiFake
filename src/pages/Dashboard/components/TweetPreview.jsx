@@ -11,16 +11,19 @@ import {
 } from "lucide-react";
 import React from "react";
 
-const TweetPreview = ({tweetData, setTweetData}) => {
+const TweetPreview = ({tweetData, setTweetData, tweetRef, handleDownload}) => {
   return (
-    <div className="max-w-lg mx-auto flex flex-col items-center">
-      <div className="w-full bg-white border border-gray-100 p-6 relative  transition">
+    <div className="max-w-lg mx-auto flex flex-col items-center ">
+      <div
+        ref={tweetRef}
+        className="w-full bg-white border border-gray-100 p-5"
+      >
         {/* Profile and Header */}
         <div className="flex items-center gap-2 mb-3">
           <img
             src={tweetData.profileImage}
             alt="Profile"
-            className="w-14 h-14 rounded-full object-cover border-2 border-blue-200 shadow"
+            className="w-12 h-12 rounded-full object-cover"
             onError={(e) => {
               e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(
                 tweetData.name
@@ -29,16 +32,14 @@ const TweetPreview = ({tweetData, setTweetData}) => {
           />
           <div className="flex-1 min-w-0">
             <div className="flex flex-col ">
-              <div className=" flex justify-items-start items-center gap-2">
-                <span className="font-bold text-gray-900 cursor-pointer">
+              <div className=" flex justify-items-start items-center gap-1">
+                <span className="font-bold truncate text-gray-900 cursor-pointer">
                   {tweetData.name}
                 </span>
-                {tweetData.verified && (
-                  <Verified className="w-5 h-5 text-blue-500 fill-current" />
-                )}
+                {tweetData.verified && <Verified className="w-4 h-4" />}
               </div>
 
-              <span className="text-gray-500 text-base text-sm truncate">
+              <span className="text-gray-500 text-sm truncate">
                 @{tweetData.username}
               </span>
             </div>
@@ -59,31 +60,34 @@ const TweetPreview = ({tweetData, setTweetData}) => {
         </div>
         {/* Engagement Stats */}
         <div className="flex flex-wrap justify-between gap-4 py-4 border-b border-gray-100 text-sm">
-          <div className="flex items-center gap-1 hover:text-blue-500 cursor-pointer">
+          <div className="flex items-center gap-1 cursor-pointer">
             <MessageCircle className="w-5 h-5" />
             <span className="font-semibold">{tweetData.comments}</span>
           </div>
-          <div className="flex items-center gap-1 hover:text-green-500 cursor-pointer">
+          <div className="flex items-center gap-1 cursor-pointer">
             <Repeat2 className="w-5 h-5" />
             <span className="font-semibold">{tweetData.retweets}</span>
           </div>
 
-          <div className="flex items-center gap-1 hover:text-red-500 cursor-pointer">
+          <div className="flex items-center gap-1 cursor-pointer">
             <Heart className="w-5 h-5" />
             <span className="font-semibold">{tweetData.likes}</span>
           </div>
-          <div className="flex items-center gap-1 hover:text-blue-500 cursor-pointer">
+          <div className="flex items-center gap-1 cursor-pointer">
             <BarChart3 className="w-5 h-5" />
             <span className="font-semibold">{tweetData.views}</span>
           </div>
-          <div className="flex items-center gap-1 hover:text-blue-500 cursor-pointer">
+          <div className="flex items-center gap-1cursor-pointer">
             <Bookmark className="w-5 h-5" />
             <span className="font-semibold">{tweetData.bookmarks}</span>
           </div>
         </div>
       </div>
 
-      <Button className="mt-6 font-semibold py-5 px-5 rounded-lg items-center gap-2 shadow-sm transition">
+      <Button
+        onClick={handleDownload}
+        className="mt-6 font-semibold py-5 px-5 rounded-lg items-center gap-2 shadow-sm transition"
+      >
         <DownloadIcon />
         Download
       </Button>
