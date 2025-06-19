@@ -5,7 +5,7 @@ import {Link, NavLink} from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-8 lg:py-34 flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
+    <section className="max-w-7xl mx-auto px-4 py-8 lg:py-28 flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
       {/* Left content */}
       <div className="w-full lg:w-1/2">
         <h1 className="text-3xl sm:text-5xl font-extrabold mb-6 leading-tight text-gray-900">
