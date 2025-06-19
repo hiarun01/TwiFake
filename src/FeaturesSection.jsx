@@ -20,10 +20,16 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-20 lg:py-28">
-      <h2 className="text-3xl font-bold text-center text-gray-900 mb-28">
+    <section className="max-w-7xl mx-auto px-4 py-20 lg:py-15">
+      <h2 className="text-3xl font-bold text-center text-gray-900 mb-5">
         Why Use TwiFake?
       </h2>
+      <p className="text-center text-gray-600 mb-20 max-w-2xl mx-auto ">
+        TwiFake is a simple tool that lets you create realistic-looking fake
+        tweets for design mockups, social media content, or fun creative
+        projects.
+      </p>
+
       <div className="grid md:grid-cols-3 gap-8">
         {features.map((f, i) => (
           <div
