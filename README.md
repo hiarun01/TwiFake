@@ -3,6 +3,30 @@
 TwiFake is a simple tool that lets you create realistic-looking fake tweets for design mockups, social media content, or fun creative projects.
 https://twifake.vercel.app/
 
+<div align="center">
+ 
+![Screenshot 2025-06-22 224949](https://github.com/user-attachments/assets/48604316-3c4d-4d1c-8ef4-882106527b6d)
+
+</div>
+
+<div align="center">
+
+![Screenshot 2025-06-22 225002](https://github.com/user-attachments/assets/d4e32f85-0657-4663-a69f-aa14d59fd1ff)
+
+</div>
+
+<div align="center">
+
+![Screenshot 2025-06-22 225016](https://github.com/user-attachments/assets/77bc299e-66c6-42b1-8b0c-4fc83bf6e42c)
+
+</div>
+
+<div align="center">
+
+![Screenshot 2025-06-22 225029](https://github.com/user-attachments/assets/43305de1-32cd-4a91-bb61-3f723aeba40f)
+
+
+</div>
 
 ## Features
 - No signup required
